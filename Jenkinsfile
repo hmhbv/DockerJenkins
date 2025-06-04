@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('jenkins-nginx-alpine')
+                    docker.build('DockerJenkins')
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker rm -f jenkins-nginx || true'
-                    sh 'docker run -d --name jenkins-nginx -p 8081:80 jenkins-nginx-alpine'
+                    sh 'docker run -d --name jenkins-nginx -p 8081:80 DokerJenkins'
                 }
             }
         }
