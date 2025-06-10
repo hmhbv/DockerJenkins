@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Clone Repo') {
       steps {
-        git(url: 'https://github.com:hmhbv/DockerJenkins.git', branch: 'main')
+        git(url: 'https:/github.com:hmhbv/DockerJenkins.git', branch: 'main')
       }
     }
 
